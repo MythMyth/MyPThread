@@ -5,9 +5,9 @@ MyPThread::MyPThread() {
 }
 
 void MyPThread::start() {
-
+    pthread_create(&m_thread, &thread_attr, &run, NULL);
 }
 
-void MyPThread::end() {
-
+void MyPThread::join() {
+    m_thread.join();
 }
