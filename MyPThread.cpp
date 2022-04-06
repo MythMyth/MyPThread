@@ -5,9 +5,9 @@ MyPThread::MyPThread() {
 }
 
 void* MyPThread::thread_run(void* t_obj) {
-    std::cout << "run\n";
-    // MyPThread *p_obj = (MyPThread*) t_obj;
-    // p_obj->run();
+    MyPThread *p_obj = (MyPThread*) t_obj;
+    p_obj->run();
+    return 0;
 }
 
 void MyPThread::start() {
